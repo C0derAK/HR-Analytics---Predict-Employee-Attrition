@@ -1,0 +1,21 @@
+employee_id,employee_name,job_title,city,skills,experience_years,department
+1,Employee 1,Data Scientist,Bengaluru,"Python, SQL, Excel",2,IT
+2,Employee 2,Data Analyst,Mumbai,"Excel, Tableau, Power BI",3,Analytics
+3,Employee 3,Machine Learning Engineer,Delhi,"Python, R, Machine Learning",5,IT
+4,Employee 4,Business Analyst,Hyderabad,"SQL, Excel, Power BI",1,Analytics
+5,Employee 5,Data Scientist,Chennai,"Python, SQL, Excel",4,IT
+6,Employee 6,Data Analyst,Bengaluru,"Excel, Tableau, Power BI",2,Analytics
+7,Employee 7,Machine Learning Engineer,Mumbai,"Python, R, Machine Learning",3,IT
+8,Employee 8,Business Analyst,Delhi,"SQL, Excel, Power BI",5,Analytics
+9,Employee 9,Data Scientist,Hyderabad,"Python, SQL, Excel",1,IT
+10,Employee 10,Data Analyst,Chennai,"Excel, Tableau, Power BI",4,Analytics
+11,Employee 11,Machine Learning Engineer,Bengaluru,"Python, R, Machine Learning",2,IT
+12,Employee 12,Business Analyst,Mumbai,"SQL, Excel, Power BI",3,Analytics
+13,Employee 13,Data Scientist,Delhi,"Python, SQL, Excel",5,IT
+14,Employee 14,Data Analyst,Hyderabad,"Excel, Tableau, Power BI",1,Analytics
+15,Employee 15,Machine Learning Engineer,Chennai,"Python, R, Machine Learning",4,IT
+16,Employee 16,Business Analyst,Bengaluru,"SQL, Excel, Power BI",2,Analytics
+17,Employee 17,Data Scientist,Mumbai,"Python, SQL, Excel",3,IT
+18,Employee 18,Data Analyst,Delhi,"Excel, Tableau, Power BI",5,Analytics
+19,Employee 19,Machine Learning Engineer,Hyderabad,"Python, R, Machine Learning",1,IT
+20,Employee 20,Business Analyst,Chennai,"SQL, Excel, Power BI",4,Analytics
