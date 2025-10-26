@@ -1,0 +1,76 @@
+🎨 Power BI Dashboard Layout — “Employee Attrition Insights”
+🧱 Dashboard Page Structure
+Section	Visual Type	Description
+Header	Text box	Title: “Employee Attrition Insights Dashboard”
+Subtitle: *HR Analytics
+KPI Cards (Top Row)	4 Cards	- Total Employees
+- Employees Left (Attrition Count)
+- Attrition Rate %
+- Average Monthly Income
+Attrition by Department	Bar Chart	X-axis: Department
+Y-axis: Count of Employees
+Legend: Attrition (Yes/No)
+Attrition by Salary Band	Column Chart	X-axis: Salary Range / MonthlyIncome bins
+Y-axis: Count of Employees
+Attrition by Age Group	Donut / Pie Chart	Shows which age group contributes most to attrition
+Attrition by Job Role	Horizontal Bar	Visualize roles with high attrition (e.g., Sales Executive, HR, Research Scientist)
+Attrition vs Promotion / Tenure	Scatter Plot	X-axis: YearsSinceLastPromotion
+Y-axis: Attrition Rate (%)
+Feature Importance (from Model)	Imported CSV or Image	Import SHAP summary or model importance CSV (shap_summary.csv)
+Attrition Prediction (Sample)	Table	Show EmployeeID, Predicted Attrition, Probability (%)
+Filters (Slicers)	Dropdown / List	Department, Gender, EducationField, JobSatisfaction
+🧭 Step-by-Step Power BI Process
+Step 1: Prepare Data
+
+Use the cleaned dataset (hr_data.csv after model preprocessing).
+If needed, export important summary data (e.g., feature importance, confusion matrix results) from Python:
+
+# Example to export feature importance
+import pandas as pd
+importance = pd.DataFrame({
+    'Feature': X.columns,
+    'Importance': tree.feature_importances_
+})
+importance.to_csv("artifacts/feature_importance.csv", index=False)
+
+
+Then import both:
+
+hr_data.csv
+
+artifacts/feature_importance.csv
+
+Step 2: Load into Power BI
+
+Open Power BI Desktop.
+
+Click Get Data → Text/CSV → hr_data.csv.
+
+Load data into the report.
+
+Use the Model view to ensure relationships (if using multiple files).
+
+Step 3: Create Visuals
+
+Go to Report View.
+
+Add a title box (“Employee Attrition Insights”).
+
+Insert cards → Total Employees, Attrition Count, etc.
+Example DAX:
+
+Attrition Count = COUNTROWS(FILTER(HR_Data, HR_Data[Attrition] = "Yes"))
+Attrition Rate = DIVIDE([Attrition Count], COUNTROWS(HR_Data)) * 100
+
+
+Add the charts as described in the layout table above.
+
+Add slicers (filters) for department, gender, education level.
+
+Step 4: Add Predictive Insights
+
+Import the feature importance CSV (artifacts/feature_importance.csv).
+
+Use a bar chart to show the top predictors.
+
+Optionally add screenshots from Python SHAP plots (artifacts/shap_summary.html → take a screenshot).
