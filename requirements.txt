@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+joblib
+reportlab
+shap  # optional; pipeline falls back to permutation importance if not installed
